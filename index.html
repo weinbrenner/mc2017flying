@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ab in die Cloud - jetzt in echt!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      ul {list-style-type: square;}
+      li {line-height: 2em;}
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }  
+	  .remark-slide-content { background-position: center; background-repeat: no-repeat; background-size: contain; font-size: 24px; }
+	  .whitefonts { color: white; }
+	  .whitefonts a { color: white; }
+	  .title h1 { font-size: 90px; }
+	  .darken h1, .darken h2 { background-color: rgba(0, 0, 0, 0.5); }
+	  .darken ul { background-color: rgba(0, 0, 0, 0.5); }
+	  .darken li ul { background-color: rgba(0, 0, 0, 0); }
+	  .brighten h1, .brighten h2 { background-color: rgba(255, 255, 255, 0.5); }
+	  .brighten ul { background-color: rgba(255, 255, 255, 0.5); }
+	  .brighten li ul { background-color: rgba(255, 255, 255, 0); }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, whitefonts, title
+background-image: url(assets/bg1.jpg)
+
+# Ab in die Cloud - jetzt in echt!
+
+---
+
+class: center, middle
+background-image: url(assets/bg2.jpg)
+
+# Vom Fliegen, der Luftfahrt und wie die Softwareentwicklung davon profitieren kann.
+
+\- Joachim Weinbrenner \-
+
+---
+
+class: whitefonts, darken
+background-image: url(assets/bg3.jpg)
+
+# Über mich
+
+- Familienmensch
+- Software-Architekt
+- Hacker
+- Firmenchef
+- Ausdauerathlet
+- Pilot
+
+---
+
+class: whitefonts, darken
+background-image: url(assets/bg4.jpg)
+
+# Wie wird man Pilot?
+
+ - Mindestalter (14/16 / 17)
+ - kein Verbrecher
+ - einigermaßen gesund
+ - Theorieausbildung
+ - Praxisausbildung
+
+---
+
+background-image: url(assets/bg5.jpg)
+
+# Übersicht Pilotenlizenzen
+
+- SPL (Sail Plane License)
+- LAPL (Light Aircraft Pilot License)
+- PPL (Private Pilot License (A/H/D)
+- CPL (Commercial Pilot License)
+- ATPL (Airline Transport Pilot Licence)
+
+---
+
+class: whitefonts, darken
+background-image: url(assets/bg6.jpg)
+
+# Class- / Typeratings
+
+- TMG
+- SEP/L (S)
+- SET
+- MEP/L (S)
+- Typeratings
+
+## Enhancements
+- Verstellprop, Einziehfahrwerk, Tailwheel, ...
+
+---
+
+class: brighten
+background-image: url(assets/bg7.jpg)
+
+# Berechtigungen (Ratings)
+
+- Instrumentenflug (IR / IFR)
+- Nachtflug
+- Lehrberechtigung (FI)
+- Kunstflug
+- Schleppflug
+- Streu-/Sprühberechtigung
+- ...
+
+---
+
+class: whitefonts, darken
+background-image: url(assets/bgchecklisten.jpg)
+
+# Checklisten
+
+- Checklisten erhöhen die Sicherheit
+- Konsequente Anwendung auch/gerade unter Stress
+- Typen: *Follow-Up* und *Read-and-Do*
+
+- Empfehlung IT: Checklisten für jeden nicht automatisierbaren Vorgang, der mehrfach abgearbeitet werden muss.
+
+---
+
+class: whitefonts
+background-image: url(assets/bg10.jpg)
+
+# Sprechfunk
+
+- klare / einfache Sprache
+- feste Sprechgruppen
+- keine Missverständnisse durch Gegenlesen
+- Verantwortlichkeit zu jedem Zeitpunkt klar
+
+---
+
+background-image: url(assets/bg11.jpg)
+
+# Idee: klares Kommunikationsschema<br>im Projekt
+
+- einheitliches Vokabular
+- klare "Sprechgruppen"
+
+---
+
+background-image: url(assets/bg8.jpg)
+
+# Lufträume
+
+- der dreidimensionale Raum ist in Lufträume aufgeteilt
+- Pilot muss immer wissen
+	- a) in welchem Luftraum er gerade ist
+	- b) welche Regeln im Luftraum gelten
+- kontrollierter und unkontrollierter Luftraum
+- Klassifizierung A/B/C/D/E/G, TMZ, RMZ, ED-R, ED-D
+
+---
+
+# Luftraumstruktur in Deutschland
+
+[Luftraumposter der DFS Deutschen Flugsicherung GmbH](https://www.dfs.de/dfs_homepage/de/Flugsicherung/Luftraum/luftraumstruktur_092016.pdf)
+
+---
+
+class: whitefonts, darken
+background-image: url(assets/icao-example.jpg)
+
+# Lufträume in der ICAO Karte
+
+---
+
+background-image: url(assets/bg9.jpg)
+
+# Idee: "Lufträume" in einer Softwareproduktionsumgebung
+
+- unkontrolliert (Spielwiesen) und kontrolliert (produktiv)
+- Klassifizierung der kontrollierten Räume, z.B.
+    - GIT Repo: Jeder berechtigte Entwickler
+    - GIT Merge in Develop: Teamkoordiniert
+    - GIT Releasebranch: Koordination mit PL
+    - Testumgebung erfordert "Einfluggenehmigung"
+    - Lotse verantwortlich für Produktionsumgebung
+- Doku der "(Luft-)Räume" passt auf ein Poster (Onboarding)
+
+---
+
+class: whitefonts, darken
+background-image: url(assets/bg12.jpg)
+
+# Kommunikation im Cockpit
+
+- klare Verantwortlichkeit (PIC)
+- flache Hierarchie
+- offene Kommunikation
+- Kritik erwünscht
+- Sicherheit geht immer vor
+- Briefings für Knackpunkte eines Fluges
+
+---
+
+background-image: url(assets/bg13.jpg)
+
+# Diese Art der Kommunikation ist auch in der IT erwünscht!
+
+- immer auf Augenhöhe
+- wertschätzend!
+
+---
+
+class: whitefonts, darken
+background-image: url(assets/bg14.jpg)
+
+# Goldene Regeln: Effektiv kommunizieren
+
+- sei klar *(vermeide unpräzise Begriffe)*
+- sei direkt *(vermeide Andeutungen)*
+- sei prägnant *(vermeide unnötige Angaben zur Nachricht)*
+- sei rechtzeitig *(melde dich, sobald die Situation es erfordert)*
+
+---
+
+background-image: url(assets/bg15.jpg)
+
+# Goldene Regeln: Warnzeichen erkennen
+
+- Es wird nicht mehr / zu wenig geredet
+- Es wird nicht mehr zugehört
+- Hektik
+- Unsicherheit
+- Verwechslungen
+
+---
+
+background-image: url(assets/bgams1.jpg)
+
+# AIRMANSHIP - oder: wie man am Leben bleibt!
+
+- Begriff des idealen Luftfahrers
+- Modell nach Tony Kern (1997 "Redefining Airmanship")
+- Zusammenspiel von
+    - Prinzipien
+    - Wissen
+    - Treffen situationsgerechter Entscheidungen
+
+---
+
+background-image: url(assets/airmanshipmodel.jpg)
+
+# AIRMANSHIP Modell
+
+---
+
+background-image: url(assets/bgdisziplin.jpg)
+
+# Disziplin
+
+- Regeln und Gesetze
+- Eigene Limits
+
+---
+
+class: whitefonts, darken
+background-image: url(assets/bgkoennen.jpg)
+
+# Können
+
+- "Toolset" des Piloten
+- 4 Levels: sicher, effektiv, effizient, präzise
+- Selbstvertrauen (Balance)
+- erweiterbar
+
+---
+
+class: whitefonts, darken
+background-image: url(assets/bgtrain.jpg)
+
+# Übung
+
+- Anwenden des "Toolsets" (Können)
+- umgekehrt proportional zur Fehlerquote
+- "Trainingsplan"
+
+---
+
+class: whitefonts
+background-image: url(assets/bgich.jpg)
+
+# Kenne dich
+
+- bin ich körperlich fit für den Flug
+- bin ich psychisch fit für den Flug
+- was benötige ich für den Flug
+
+---
+
+class: brighten
+background-image: url(assets/bgplane.jpg)
+
+# Kenne dein Flugzeug
+
+- Limits
+    - Weight & Balance
+    - Geschwindigkeiten
+    - Start-/Landestrecke
+- Technische Besonderheiten
+- Verbaute Avionik
+
+---
+
+class: brighten
+background-image: url(assets/bgteam.jpg)
+
+# Kenne dein Team
+
+- Menschen einschätzen
+- Leadership / Followership
+- Kommunikationsfähigkeiten
+- Konfliktlösung
+- Optimum: Performanz des Teams &gt; Summe der Performanz aller Mitglieder
+
+---
+
+background-image: url(assets/bgumwelt.jpg)
+
+# Kenne deine Umwelt
+
+- Physische Umwelt
+- Regeln / Gesetze
+- Organisatorische Umwelt
+
+---
+
+class: whitefonts, darken
+background-image: url(assets/bgrisiko.jpg)
+
+# Kenne die Risiken
+
+- Risiko = Wahrscheinlichkeit und Schwere eines Verlustes in Bezug auf eine Gefahr
+- Managen durch kontrollieren, vermeiden, reduzieren, verteilen oder transferieren
+- Risiken finden sich in allen Bereichen des Airmanship Modells
+
+---
+
+background-image: url(assets/bgsa.jpg)
+
+# Situationsbewusstsein
+
+- Voller Überblick über Raum und Zeit
+- klares Bild der nahen Zukunft und deren Optionen
+- Minimieren von Überraschungen
+
+---
+
+background-image: url(assets/bgbue.jpg)
+
+# Beurteilung und Entscheidungsfindung
+
+- Situation erfassen
+- Alternativen bewerten
+- Entscheidung treffen
+
+---
+
+class: center, middle, whitefonts, darken
+background-image: url(assets/bgfun.jpg)
+
+# Egal, ob Fliegen oder IT - Hauptsache die Stimmung an Board ist immer bestens!
+
+---
+
+class: center, middle, whitefonts
+background-image: url(assets/bgfragen.jpg)
+
+# <br><br><br><br><br><br><br><br>So long ... noch Fragen?
+
+---
+
+background-image: url(assets/bgvielendank.jpg)
+class: center, middle, whitefonts
+
+# Vielen Dank!
+
+http://www.weinbrenner.name/joachim/
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({ratio: '16:9'});
+    </script>
+  </body>
+</html>
